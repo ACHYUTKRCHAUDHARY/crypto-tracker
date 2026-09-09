@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "../Button";
 import TemporaryDrawer from "./drawer";
 import "./styles.css";
@@ -45,18 +46,18 @@ function Header() {
       </h1>
       <div className="links">
         <Switch checked={darkMode} onClick={() => changeMode()} />
-        <a href="/">
+        <Link to="/">
           <p className="link">Home</p>
-        </a>
-        <a href="/compare">
+        </Link>
+        <Link to="/compare">
           <p className="link">Compare</p>
-        </a>
-        <a href="/watchlist">
+        </Link>
+        <Link to="/watchlist">
           <p className="link">Watchlist</p>
-        </a>
-        <a href="/dashboard">
+        </Link>
+        <Link to="/dashboard">
           <Button text={"dashboard"} />
-        </a>
+        </Link>
       </div>
       <div className="drawer-component">
         <TemporaryDrawer />
